@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suzanna Bolich - Healthcare Informatics Work Portfolio</title>
+    <title>Who I Am - Suzanna Bolich Healthcare Portfolio</title>
     <style>
         * {
             margin: 0;
@@ -56,7 +56,7 @@
         .intro-section p {
             font-size: 1.05em;
             color: #555;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             line-height: 1.8;
         }
@@ -236,19 +236,6 @@
             font-size: 0.95em;
         }
         
-        .form-preview {
-            margin: 30px 0;
-            text-align: center;
-        }
-        
-        .form-preview img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            margin-bottom: 15px;
-        }
-        
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -274,6 +261,14 @@
             opacity: 0.95;
         }
         
+        .highlight {
+            background: #fff3cd;
+            padding: 20px;
+            border-radius: 5px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+        }
+        
         footer {
             background: #1a5f7a;
             color: white;
@@ -284,14 +279,6 @@
         
         footer p {
             margin-bottom: 8px;
-        }
-        
-        .highlight {
-            background: #fff3cd;
-            padding: 20px;
-            border-radius: 5px;
-            border-left: 4px solid #ffc107;
-            margin: 20px 0;
         }
         
         @media (max-width: 768px) {
@@ -325,8 +312,8 @@
 <body>
     <div class="container">
         <header>
-            <h1>Healthcare Informatics Work Portfolio</h1>
-            <p>Suzanna Bolich | Health Information Management Professional</p>
+            <h1>Who I Am</h1>
+            <p>Healthcare Informatics Projects & Professional Portfolio</p>
         </header>
         
         <div class="intro-section">
@@ -338,7 +325,6 @@
         </div>
         
         <nav>
-            <a onclick="showProject('semesters')">Semesters & Coursework</a>
             <a onclick="showProject('database')">Database Project</a>
             <a onclick="showProject('policies')">Policy Documents</a>
             <a onclick="showProject('analytics')">Data Analytics</a>
@@ -347,89 +333,7 @@
         </nav>
         
         <div class="content">
-<!-- Semesters & Coursework Section -->
-            <div id="semesters" class="project-section active">
-                <div class="project-header">
-                    <div class="project-icon">📚</div>
-                    <div class="project-title">
-                        <h2>Semesters & Coursework</h2>
-                        <p>Columbus State Community College | Health Information Management Technology</p>
-                    </div>
-                </div>
-                
-                <div class="project-description">
-                    <h3>Academic Progress</h3>
-                    <p>
-                        I am currently enrolled in six courses, and I have completed 15 courses across five 
-                        semesters, with a cumulative GPA of 3.25 and Dean's List recognition each semester. My coursework spans 
-                        foundational health sciences, health information management, medical coding, information technology, 
-                        and healthcare statistics.
-                    </p>
-                </div>
-                
-                <div style="margin-bottom: 20px;">
-                    <button onclick="toggleSemester(this)" style="background: #2d8a9e; color: white; padding: 12px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 1em; width: 100%; text-align: left;">▼ Autumn 2024 (GPA: 4.0 | Dean's List)</button>
-                    <div style="background: #f9f9f9; padding: 25px; border-radius: 5px; margin-top: 10px; display: block;">
-                        <p><strong>BIO 1101</strong> - Fundamentals of Biology (A)<br/>Introduction to cellular and organismal biology, including genetics, evolution, and ecology.</p>
-                        <p><strong>HIMT 1111</strong> - Introduction to Health Information (A)<br/>Overview of health information management, medical record systems, and healthcare delivery models.</p>
-                        <p><strong>HIMT 1133</strong> - ICD-10-CM Coding (A)<br/>Diagnosis coding using ICD-10-CM classification system with compliance and accuracy principles.</p>
-                        <p><strong>HIMT 1135</strong> - Reimbursement Methodologies (A)<br/>Healthcare payment systems, DRGs, case-mix adjustments, and insurance billing processes.</p>
-                        <p><strong>CSCI 1001</strong> - Introduction to Computer Science (A)<br/>Fundamentals of programming logic, algorithms, and computer systems architecture.</p>
-                    </div>
-                </div>
-                
-                <div style="margin-bottom: 20px;">
-                    <button onclick="toggleSemester(this)" style="background: #2d8a9e; color: white; padding: 12px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 1em; width: 100%; text-align: left;">▼ Spring 2025 (GPA: 3.75 | Dean's List)</button>
-                    <div style="background: #f9f9f9; padding: 25px; border-radius: 5px; margin-top: 10px; display: block;">
-                        <p><strong>CSCI 1101</strong> - Programming Fundamentals (B)<br/>Object-oriented programming concepts, data types, control structures, and debugging techniques.</p>
-                        <p><strong>HIMT 1121</strong> - Health Data Analysis (A)<br/>Statistical analysis of healthcare data, outcomes measurement, and quality metrics.</p>
-                        <p><strong>HIMT 1256</strong> - CPT & HCPCS Coding (A)<br/>Procedure and service coding using CPT and HCPCS Level II systems for reimbursement.</p>
-                        <p><strong>HIMT 1274</strong> - Healthcare Compliance (A)<br/>HIPAA regulations, privacy and security rules, and audit procedures for healthcare organizations.</p>
-                        <p><strong>STAT 1350</strong> - Statistics for Healthcare (A)<br/>Descriptive and inferential statistics with applications to healthcare research and quality improvement.</p>
-                    </div>
-                </div>
-                
-                <div style="margin-bottom: 20px;">
-                    <button onclick="toggleSemester(this)" style="background: #2d8a9e; color: white; padding: 12px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 1em; width: 100%; text-align: left;">▼ Summer 2025 (GPA: 3.75 | Dean's List)</button>
-                    <div style="background: #f9f9f9; padding: 25px; border-radius: 5px; margin-top: 10px; display: block;">
-                        <p><strong>BIO 2300</strong> - Anatomy & Physiology (A)<br/>Structure and function of human body systems, pathophysiology, and disease processes.</p>
-                        <p><strong>ENGL 1100</strong> - English Composition (B)<br/>Academic writing, research skills, and professional communication techniques.</p>
-                        <p><strong>HIMT 1141</strong> - Electronic Health Records (A)<br/>EHR systems, workflow design, clinical documentation standards, and interoperability.</p>
-                        <p><strong>SOC 1101</strong> - Introduction to Sociology (A)<br/>Social structures, cultural diversity, and organizational behavior in healthcare settings.</p>
-                    </div>
-                </div>
-                
-                <div style="margin-bottom: 20px;">
-                    <button onclick="toggleSemester(this)" style="background: #2d8a9e; color: white; padding: 12px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 1em; width: 100%; text-align: left;">▼ Autumn 2025 (GPA: 3.75 | Dean's List)</button>
-                    <div style="background: #f9f9f9; padding: 25px; border-radius: 5px; margin-top: 10px; display: block;">
-                        <p><strong>CSCI 1320</strong> - Database Fundamentals (A)<br/>Relational database design, SQL queries, normalization, and data integrity principles.</p>
-                        <p><strong>HIMT 1245</strong> - Quality Improvement in Healthcare (A)<br/>QI methodologies, process mapping, metrics design, and continuous improvement frameworks.</p>
-                        <p><strong>HIMT 1255</strong> - Revenue Cycle Management (B)<br/>End-to-end revenue cycle processes, billing, accounts receivable, and reimbursement optimization.</p>
-                        <p><strong>HIMT 1265</strong> - Health Information Systems (A)<br/>HIS architecture, clinical systems integration, data standards, and system selection.</p>
-                        <p><strong>HIMT 2870</strong> - HIM Capstone Seminar (A)<br/>Synthesis of HIMT competencies, professional development, and healthcare career exploration.</p>
-                    </div>
-                </div>
-                
-                <div style="margin-bottom: 20px;">
-                    <button onclick="toggleSemester(this)" style="background: #2d8a9e; color: white; padding: 12px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 1em; width: 100%; text-align: left;">▼ Spring 2026 (In Progress)</button>
-                    <div style="background: #f9f9f9; padding: 25px; border-radius: 5px; margin-top: 10px; display: block;">
-                        <p><strong>HIMT 2259</strong> - Health Information Quality & Analysis<br/>Data quality assessment, validity, reliability, and healthcare analytics applications.</p>
-                        <p><strong>HIMT 2267</strong> - Principles of Management<br/>Leadership, organizational structure, budgeting, strategic planning, and HIM department management.</p>
-                        <p><strong>HIMT 2257</strong> - Health Statistics<br/>Healthcare statistics, epidemiology, vital statistics, and population health indicators.</p>
-                        <p><strong>Advanced Coding</strong> - Clinical Documentation & Auditing<br/>Advanced coding scenarios, documentation improvement, and auditing compliance.</p>
-                        <p><strong>CSCI 1102</strong> - Data Structures & Algorithms<br/>Complex data structures, algorithm design, and performance optimization.</p>
-                    </div>
-                </div>
-                
-                <h3 style="color: #1a5f7a; margin: 30px 0 20px 0;">Portfolio Artifacts & Projects</h3>
-                <p style="color: #666; margin-bottom: 20px;">
-                    The projects showcased below demonstrate the practical application of coursework concepts in healthcare 
-                    informatics. Each artifact represents real-world HIM competencies developed through academic study and 
-                    professional practice.
-                </p>
-            </div>
             
-            <!-- Database Project Section -->
             <!-- Database Project Section -->
             <div id="database" class="project-section active">
                 <div class="project-header">
@@ -769,17 +673,6 @@
                     top: 0,
                     behavior: 'smooth'
                 });
-            }
-        }
-        
-        function toggleSemester(button) {
-            const content = button.nextElementSibling;
-            if (content.style.display === 'none') {
-                content.style.display = 'block';
-                button.textContent = button.textContent.replace('►', '▼');
-            } else {
-                content.style.display = 'none';
-                button.textContent = button.textContent.replace('▼', '►');
             }
         }
     </script>
