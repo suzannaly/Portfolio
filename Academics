@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Materials - Suzanna Bolich</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #fff8f6ff;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1a5f7a 0%, #2d8a9e 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+            border-radius: 0;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section-intro {
+            background: #fff8f6ff;
+            padding: 30px;
+            border-left: 4px solid #2d8a9e;
+            margin-bottom: 40px;
+            border-radius: 5px;
+        }
+        
+        .section-intro h2 {
+            color: #1a5f7a;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .section-intro p {
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        h3 {
+            color: #1a5f7a;
+            margin: 30px 0 20px 0;
+            font-size: 1.2em;
+        }
+        
+        .semester-toggle {
+            background: #2d8a9e;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            width: 100%;
+            text-align: left;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .semester-toggle:hover {
+            background: #1a5f7a;
+            transform: translateX(5px);
+        }
+        
+        .semester-content {
+            background: #fff8f6ff;
+            padding: 25px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #2d8a9e;
+            animation: slideDown 0.3s ease;
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .semester-content p {
+            margin-bottom: 15px;
+            line-height: 1.7;
+            color: #555;
+        }
+        
+        .semester-content strong {
+            color: #1a5f7a;
+            display: block;
+            margin-bottom: 5px;
+            margin-top: 10px;
+        }
+        
+        .semester-content br {
+            margin-bottom: 8px;
+        }
+        
+        .gpa-badge {
+            display: inline-block;
+            background: #2d8a9e;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin-left: 15px;
+            font-weight: 500;
+        }
+        
+        .in-progress {
+            display: inline-block;
+            background: #f0ad4e;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin-left: 15px;
+            font-weight: 500;
+        }
+        
+        footer {
+            background: #f9f9f9;
+            padding: 30px 40px;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+            color: #666;
+            font-size: 0.95em;
+            border-radius: 0;
+        }
+        
+        footer p {
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+<div style="background: #1a5f7a; padding: 15px; text-align: center; width: 100vw; margin-left: calc(-50vw + 50%); box-sizing: border-box; display: flex; justify-content: center; flex-wrap: wrap;">
+<button onclick="window.location='https://sites.google.com/view/suzanna-bolich-e-portfolio/welcome'" onmouseover="this.style.backgroundImage='url(https://raw.githubusercontent.com/suzannaly/Portfolio/main/images/home.png)'; this.style.backgroundSize='cover'; this.style.color='transparent';" onmouseout="this.style.backgroundImage='none'; this.style.color='white';" style="background: #2d8a9e; color: white; border: none; padding: 0; width: 155px; height: 85px; margin: 5px; cursor: pointer; font-weight: 500; border-radius: 5px; display: flex; align-items: center; justify-content: center;">Welcome</button>
+
+<button onclick="window.location='https://sites.google.com/view/suzanna-bolich-e-portfolio/academic-materials'" onmouseover="this.style.backgroundImage='url(https://raw.githubusercontent.com/suzannaly/Portfolio/main/images/College.png)'; this.style.backgroundSize='cover'; this.style.color='transparent';" onmouseout="this.style.backgroundImage='none'; this.style.color='white';" style="background: #2d8a9e; color: white; border: none; padding: 0; width: 155px; height: 85px; margin: 5px; cursor: pointer; font-weight: 500; border-radius: 5px; display: flex; align-items: center; justify-content: center;"> Academic Materials </button>
+
+<button onclick="window.location='https://sites.google.com/view/suzanna-bolich-e-portfolio/resume'" onmouseover="this.style.backgroundImage='url(https://raw.githubusercontent.com/suzannaly/Portfolio/main/images/resume.png)'; this.style.backgroundSize='cover'; this.style.color='transparent';" onmouseout="this.style.backgroundImage='none'; this.style.color='white';" style="background: #2d8a9e; color: white; border: none; padding: 0; width: 155px; height: 85px; margin: 5px; cursor: pointer; font-weight: 500; border-radius: 5px; display: flex; align-items: center; justify-content: center;"> Resume </button>
+
+<button onclick="window.location='https://sites.google.com/view/suzanna-bolich-e-portfolio/ppe-experiences'" onmouseover="this.style.backgroundImage='url(https://raw.githubusercontent.com/suzannaly/Portfolio/main/images/office.png)'; this.style.backgroundSize='cover'; this.style.color='transparent';" onmouseout="this.style.backgroundImage='none'; this.style.color='white';" style="background: #2d8a9e; color: white; border: none; padding: 0; width: 155px; height: 85px; margin: 5px; cursor: pointer; font-weight: 500; border-radius: 5px; display: flex; align-items: center; justify-content: center;"> PPE Experiences </button>
+
+<button onclick="window.location='https://sites.google.com/view/suzanna-bolich-e-portfolio/volunteer-work'" onmouseover="this.style.backgroundImage='url(https://raw.githubusercontent.com/suzannaly/Portfolio/main/images/United.png)'; this.style.backgroundSize='cover'; this.style.color='transparent';" onmouseout="this.style.backgroundImage='none'; this.style.color='white';" style="background: #2d8a9e; color: white; border: none; padding: 0; width: 155px; height: 85px; margin: 5px; cursor: pointer; font-weight: 500; border-radius: 5px; display: flex; align-items: center; justify-content: center;"> Volunteer Work </button>
+
+<button onclick="window.location='https://sites.google.com/view/suzanna-bolich-e-portfolio/who-i-am'" onmouseover="this.style.backgroundImage='url(https://raw.githubusercontent.com/suzannaly/Portfolio/main/images/who.png)'; this.style.backgroundSize='cover'; this.style.color='transparent';" onmouseout="this.style.backgroundImage='none'; this.style.color='white';" style="background: #2d8a9e; color: white; border: none; padding: 0; width: 155px; height: 85px; margin: 5px; cursor: pointer; font-weight: 500; border-radius: 5px; display: flex; align-items: center; justify-content: center;"> Who I Am </button>
+</div> 
+
+        <header>
+            <h1>Academic Materials</h1>
+            <p>Health Information Management Technology Coursework</p>
+        </header>
+        
+        <div class="content">
+            <div class="section-intro">
+                <h2>Educational Background</h2>
+                <p>
+                    I am pursuing an Associate of Applied Science in Health Information Management Technology (HIMT AAS) 
+                    at Columbus State Community College with an expected graduation date of May 2026. My coursework focuses on 
+                    healthcare data management, medical coding, compliance, quality improvement, and health information systems. 
+                    Below is a comprehensive summary of courses completed and currently in progress, organized by semester.
+                </p>
+            </div>
+            
+            <h3>Coursework by Semester</h3>
+            
+            <div style="margin-bottom: 20px;">
+                <button onclick="toggleSemester(this)" class="semester-toggle">► Autumn 2024<span class="gpa-badge">Dean's List</span></button>
+                <div class="semester-content" style="display: none;">
+                    <p><strong>HIMT 1111</strong> Introduction to Health Information Management<br/> Overview of HIM profession, roles of HIM technicians, U.S. healthcare delivery system, accrediting requirements, and credentialing pathways.</p>
+                    <p><strong>HIMT 1133</strong> Legal Aspects of Health Information<br/>Legal principles and regulations governing the management and disclosure of health information, including privacy laws and compliance requirements.</p>
+                      <p><strong>HIMT 1135</strong> Health Data Management<br/>Categories of data collected and maintained by healthcare providers; data flow in paper, hybrid, and electronic health record (EHR) environments.</p>
+<p><strong>BIO 1101</strong> Fundamentals Human Anatomy & Physiology<br/> Comprehensive study of human body systems, normal physiology, and pathophysiology. Using scientific principles by investigating homeostasis of cells, tissues, and organ-systems of the body to solve real-world problems.</p>
+<p><strong>CSCI 1001</strong> Computer Fundamentals<br/> Foundational computer skills, hardware, software, and applications. </p>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <button onclick="toggleSemester(this)" class="semester-toggle">► Spring 2025<span class="gpa-badge"> &nbsp;&nbsp;&nbsp;Dean's List</span></button>
+                <div class="semester-content" style="display: none;">
+                    <p><strong>HIMT 1121</strong> Advanced Medical Terminology<br/>Advanced study of medical terminology using systems approach; includes anatomy, physiology, medical abbreviations, and vocabulary for coding and documentation.</p>
+                    <p><strong>HIMT 1256</strong> - Clinical Documentation & Disease<br/>Clinical information supporting diagnoses and services provided to patients as it pertains to healthcare data management and documentation accuracy.</p>
+                    <p><strong>HIMT 1274</strong> - Intro to Medical Coding & Reimbursement <br/>Overview of hospital and physician-based medical coding and reimbursement principles, including coding systems and revenue cycle concepts.</p>
+                    <p><strong>STAT 1350</strong> - Elementary Statistics (EHR)<br/> Statistical methods used in gathering and analyzing data. The course includes survey methods, graphical displays of data, descriptive statistics, the Normal distribution, correlation and linear regression, basic concepts in probability and simulation, sampling distributions and the Central Limit Theorem, confidence intervals, and significance testing.</p>
+<p><strong>CSCI 1101</strong> Computer Concepts & Applications <br/> Advanced computer concepts and essential skills necessary for work and communication.</p>
+                </div>
+            </div>
+<div style="margin-bottom: 20px;">
+                <button onclick="toggleSemester(this)" class="semester-toggle">► Summer 2025<span class="gpa-badge">Dean's List</span></button>
+
+                <div class="semester-content" style="display: none;">
+<p><strong> HIMT 1141</strong> - Pharmacology <br/> Survey of major drug classifications, indications, contraindications, and correlation between drug therapy and disease management.</p>                 
+   <p><strong> BIO 2300</strong> - Human Anatomy <br/> The gross anatomy of the entire body is presented in detail. The human cadaver will be used to study the regions of the body (Back, lower limb, upper limb, head and neck, thorax, abdomen and pelvis.</p>
+                    <p><strong> ENGL 1100</strong> - Composition I <br/> Professional writing skills, research methods, and communication.</p>
+                                        <p><strong> SOC 1101</strong> - Intro to Sociology<br/> Basic concepts, methods and findings of sociology as a scientific discipline. Exploring: culture; socialization; social groups, including organizations; deviance; various types of social inequality; major social institutions; collective behavior, social movement and social change.</p>
+                </div>
+            </div>
+                       <div style="margin-bottom: 20px;">
+                <button onclick="toggleSemester(this)" class="semester-toggle">► Autumn 2025 <span class="gpa-badge">Dean's List</span></button>
+                <div class="semester-content" style="display: none;">
+                    
+                    <p><strong>HIMT 1245</strong> - ICD-10-CM/PCS Coding<br/>ICD-10-CM/PCS coding system for diagnoses and procedures; basic principles, official guidelines, and practical application.</p>
+                    <p><strong>HIMT 1255</strong> - CPT-4 Coding<br/>CPT-4 coding system for outpatient procedures and services; code assignment, modifier usage, and compliance.</p>
+                    <p><strong>HIMT 1265</strong> - Medical Reimbursement<br/>Revenue cycles, payers, and reimbursement systems as applied to healthcare payment, billing, and claims management.</p>
+<p><strong>CSCI 1320</strong> - Database Fundamentals (A)<br/>Database design, structure, querying, and management using SQL and Microsoft Access; creation and implementation of functional database systems.</p>
+                    <p><strong>HIMT 2870</strong> - PPE HIM Applications<br/> Practicum course bridging classroom and HIM work environment; includes experience and course assignments in database development and workflow redesign.</p>
+
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <button onclick="toggleSemester(this)" class="semester-toggle">► Spring 2026 <span class="gpa-badge"> &nbsp;&nbsp;IN PROGRESS</span></button>
+                <div class="semester-content" style="display: none;">
+<p><strong>HIMT 2257</strong> - Health Statistics<br/>Basics of statistical computation as it relates to healthcare; procedures for collecting, organizing, displaying, and interpreting healthcare data and statistics.</p>                    
+<p><strong>HIMT 2259</strong> - Quality and Resource Management<br/>Internal and external requirements for establishing, operating, and maintaining quality improvement and utilization management programs; accreditation standards, benchmarking, credentialing, patient outcomes monitoring, and evaluation.</p>
+                    <p><strong>HIMT 2267</strong> - Principles of Management<br/>Functions related to planning, organizing, controlling, budgeting, and evaluating human resources in healthcare organizations.</p>
+                    <p><strong>HIMT 2275</strong> - Intermediate Coding </strong> - Continued experience in ICD-10-CM/PCS and CPT-4 coding with emphasis on practical application, case studies, and professional standards. </p>
+                    <p><strong>CSCI 1102</strong> - Intermediate Excel & Access <br/>Developed advanced proficiency in Microsoft Excel (pivot tables, financial functions, charts, macros, data analysis) and Microsoft Access (database design, queries, forms, reports). Completed integrated projects combining both applications for comprehensive data management and organizational workflows.</p>
+<p><strong>HIMT 2870</strong> - PPE Field Experience <br/> Practicum course bridging classroom and HIM work environment; includes experience and course assignments in medical coding and revenue cycle management, HIM operations, and Solventum encoder.</p>
+
+                </div>
+            </div>
+            
+            <h3 style="margin-top: 40px;">Key Learning Outcomes</h3>
+            <div class="semester-content">
+                <ul style="margin-left: 20px; color: #555;">
+                    <li><strong>Medical Coding Expertise:</strong> Proficiency in ICD-10-CM, ICD-10-PCS, and CPT coding systems with focus on accuracy and compliance.</li>
+                    <li><strong>Healthcare Data Management:</strong> Understanding of electronic health records, data quality, analytics, and reporting for healthcare decision-making.</li>
+                    <li><strong>Compliance & Privacy:</strong> Knowledge of HIPAA regulations for protecting patient information.</li>
+                    <li><strong>Revenue Cycle Management:</strong> Competency in billing processes, claims management, and financial operations in healthcare organizations.</li>
+                    <li><strong>Quality Improvement:</strong> Ability to identify process improvements, design metrics, and implement evidence-based QI methodologies.</li>
+                    <li><strong>Technical Skills:</strong> Proficiency in database design, SQL, Microsoft Access, Excel, and health information systems.</li>
+                    <li><strong>Professional Communication:</strong> Strong documentation, presentation, and communication skills for healthcare environments.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <footer>
+            <p><strong>Academic Materials</strong></p>
+            <p>Suzanna Bolich | Health Information Management Professional</p>
+            <p>Columbus State Community College | Expected Graduation: May 2026</p>
+            <p style="font-size: 0.85em; margin-top: 15px; opacity: 0.9;">
+                Associate of Applied Science in Health Information Management Technology
+            </p>
+        </footer>
+    </div>
+    
+    <script>
+        function toggleSemester(button) {
+            const content = button.nextElementSibling;
+            if (content.style.display === 'none') {
+                content.style.display = 'block';
+                button.textContent = button.textContent.replace('►', '▼');
+            } else {
+                content.style.display = 'none';
+                button.textContent = button.textContent.replace('▼', '►');
+            }
+        }
+    </script>
+</body>
+</html>
