@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who I Am - Suzanna Bolich E-Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff8f6ff;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1a5f7a 0%, #2d8a9e 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        
+        /* Credentials Bar */
+        .credentials-bar {
+            background: #f9f9f9;
+            padding: 25px 40px;
+            border-bottom: 2px solid #e0e0e0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+
+        }
+        
+        .credential-item {
+            display: flex;
+            flex-direction: column;
+align-items: flex-start;
+        }
+        
+        .credential-label {
+            font-size: 2.5em;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 5px;
+        }
+        
+        .credential-value {
+            font-size: 2em;
+            color: #1a5f7a;
+            font-weight: 500;
+        }
+        
+        /* Intro */
+        .intro-section {
+            background: #fff8f6ff;
+            padding: 30px 40px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        
+        .intro-section p {
+            font-size: 1.05em;
+            color: #555;
+            max-width: 900px;
+            line-height: 1.8;
+        }
+        
+        /* Navigation Tabs */
+        .tab-navigation {
+            background: transparent;
+            padding: 15px 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 60px;
+            border-bottom: 1px solid #ddd;
+justify-content:center;
+        }
+        
+        .tab-btn {
+            background: #b3d9e6;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .tab-btn:hover {
+            background: #2d8a9e;
+            transform: translateY(-2px);
+        }
+        
+        .tab-btn.active {
+            background: #2d8a9e;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Content Area */
+        .content {
+            padding: 40px;
+        }
+        
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Project Header */
+        .project-header {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #2d8a9e;
+        }
+        
+        .project-header h2 {
+            color: #1a5f7a;
+            font-size: 1.8em;
+            margin-bottom: 8px;
+        }
+        
+        .project-meta {
+            color: #777;
+            font-size: 0.95em;
+        }
+        
+        /* Content Sections */
+        .section-box {
+            background: #fff8f6ff;
+            padding: 25px;
+            border-left: 4px solid #2d8a9e;
+            margin-bottom: 25px;
+            border-radius: 5px;
+        }
+        
+        .section-box h3 {
+            color: #1a5f7a;
+            margin-bottom: 12px;
+            font-size: 1.1em;
+        }
+        
+        .section-box p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+        
+        .section-box ul {
+            margin-left: 20px;
+            color: #555;
+        }
+        
+        .section-box li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+        
+        /* Why This Matters Section */
+        .why-matters {
+            background: linear-gradient(135deg, #f0f7fa 0%, #e8f4f8 100%);
+            padding: 25px;
+            border-left: 4px solid #2d8a9e;
+            margin: 30px 0;
+            border-radius: 5px;
+        }
+        
+        .why-matters h3 {
+            color: #1a5f7a;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .why-matters h3:before {
+            content: "★";
+            font-size: 1.2em;
+        }
+        
+        .why-matters p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+        
+        .why-matters p:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* Image Placeholder */
+        .image-placeholder {
+            background: linear-gradient(135deg, #f0f0f0 0%, #e8e8e8 100%);
+            border: 2px dashed #2d8a9e;
+            border-radius: 8px;
+            padding: 50px 30px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .placeholder-icon {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            opacity: 0.6;
+        }
+        
+        .placeholder-text {
+            color: #999;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+        
+        .placeholder-text strong {
+            display: block;
+            color: #666;
+            font-size: 1em;
+            margin-bottom: 8px;
+        }
+        
+        /* Project Meta Grid */
+        .project-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        
+        .detail-item {
+            font-size: 0.9em;
+        }
+        
+        .detail-label {
+            color: #999;
+            font-size: 0.75em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 5px;
+        }
+        
+        .detail-value {
+            color: #1a5f7a;
+            font-weight: 500;
+        }
+        
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
+        }
+        
+        .skill-tag {
+            background: #2d8a9e;
+            color: white;
+            padding: 12px 16px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            text-align: center;
+        }
+        
+        footer {
+            background: #1a5f7a;
+            color: white;
+            text-align: center;
+            padding: 30px 40px;
+            border-top: 3px solid #2d8a9e;
+        }
+        
+        footer p {
+            margin-bottom: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            
+            header h1 {
+                font-size: 1.8em;
+            }
+            
+            .credentials-bar,
+            .tab-navigation,
+            .content {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            
+            .tab-navigation {
+                gap: 8px;
+            }
+            
+            .tab-btn {
+                padding: 8px 12px;
+                font-size: 0.85em;
+            }
+            
+            .project-details {
+                grid-template-columns: 1fr;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+<div style="background: #1a5f7a; padding: 15px; text-align: center; width: 100vw; margin-left: calc(-50vw + 50%); box-sizing: border-box; display: flex; justify-content: center; flex-wrap: wrap;">
+<button onclick="window.location='https://sites.google.com/view/suzanna-bolich-e-portfolio/welcome'" onmouseover="this.style.backgroundImage='url(https://raw.githubusercontent.com/suzannaly/Portfolio/main/images/home.png)'; this.style.backgroundSize='cover'; this.style.color='transparent';" onmouseout="this.style.backgroundImage='none'; this.style.color='white';" style="background: #2d8a9e; color: white; border: none; padding: 0; width: 155px; height: 85px; margin: 5px; cursor: pointer; font-weight: 500; border-radius: 5px; display: flex; align-items: center; justify-content: center;">Welcome</button>
+
+<button onclick="window.location='https://sites.google.com/view/suzanna-bolich-e-portfolio/academic-materials'" onmouseover="this.style.backgroundImage='url(https://raw.githubusercontent.com/suzannaly/Portfolio/main/images/College.png)'; this.style.backgroundSize='cover'; this.style.color='transparent';" onmouseout="this.style.backgroundImage='none'; this.style.color='white';" style="background: #2d8a9e; color: white; border: none; padding: 0; width: 155px; height: 85px; margin: 5px; cursor: pointer; font-weight: 500; border-radius: 5px; display: flex; align-items: center; justify-content: center;"> Academic Materials </button>
+
+<button onclick="window.location='https://sites.google.com/view/suzanna-bolich-e-portfolio/resume'" onmouseover="this.style.backgroundImage='url(https://raw.githubusercontent.com/suzannaly/Portfolio/main/images/resume.png)'; this.style.backgroundSize='cover'; this.style.color='transparent';" onmouseout="this.style.backgroundImage='none'; this.style.color='white';" style="background: #2d8a9e; color: white; border: none; padding: 0; width: 155px; height: 85px; margin: 5px; cursor: pointer; font-weight: 500; border-radius: 5px; display: flex; align-items: center; justify-content: center;"> Resume </button>
+
+<button onclick="window.location='https://sites.google.com/view/suzanna-bolich-e-portfolio/ppe-experiences'" onmouseover="this.style.backgroundImage='url(https://raw.githubusercontent.com/suzannaly/Portfolio/main/images/office.png)'; this.style.backgroundSize='cover'; this.style.color='transparent';" onmouseout="this.style.backgroundImage='none'; this.style.color='white';" style="background: #2d8a9e; color: white; border: none; padding: 0; width: 155px; height: 85px; margin: 5px; cursor: pointer; font-weight: 500; border-radius: 5px; display: flex; align-items: center; justify-content: center;"> PPE Experiences </button>
+
+<button onclick="window.location='https://sites.google.com/view/suzanna-bolich-e-portfolio/volunteer-work'" onmouseover="this.style.backgroundImage='url(https://raw.githubusercontent.com/suzannaly/Portfolio/main/images/United.png)'; this.style.backgroundSize='cover'; this.style.color='transparent';" onmouseout="this.style.backgroundImage='none'; this.style.color='white';" style="background: #2d8a9e; color: white; border: none; padding: 0; width: 155px; height: 85px; margin: 5px; cursor: pointer; font-weight: 500; border-radius: 5px; display: flex; align-items: center; justify-content: center;"> Volunteer Work </button>
+
+<button onclick="window.location='https://sites.google.com/view/suzanna-bolich-e-portfolio/who-i-am'" onmouseover="this.style.backgroundImage='url(https://raw.githubusercontent.com/suzannaly/Portfolio/main/images/who.png)'; this.style.backgroundSize='cover'; this.style.color='transparent';" onmouseout="this.style.backgroundImage='none'; this.style.color='white';" style="background: #2d8a9e; color: white; border: none; padding: 0; width: 155px; height: 85px; margin: 5px; cursor: pointer; font-weight: 500; border-radius: 5px; display: flex; align-items: center; justify-content: center;"> Who I Am </button>
+</div> 
+
+        <!-- Header -->
+        <header>
+            <h1>Who I Am</h1>
+            <p>Suzanna Bolich | Health Information Management Professional</p>
+        </header>
+        
+        <!-- Credentials Bar -->
+       <div class="credentials-bar">
+    <div class="credential-item">
+        <div class="credential-label">Education</div>
+        <div class="credential-value">Student, CSCC: HIMT A.A.S.</div>
+        <div class="credential-value">Graduation May, 2026</div>
+    </div>
+    <div class="credential-item">
+        <div class="credential-label">Certification</div>
+        <div class="credential-value">RHIT Candidate (June 2026)</div>
+    </div>
+</div>
+        
+        <!-- Intro -->
+        <div class="intro-section">
+            <p>
+                I am a systematic thinker who applies healthcare knowledge to create functional, well-organized systems and clear communication tools. The projects below demonstrate my technical skills, analytical thinking, compliance understanding, and ability to translate complex healthcare information for different audiences.
+            </p>
+        </div>
+        
+        <!-- Tabs -->
+        <div class="tab-navigation">
+            <button class="tab-btn active" onclick="switchTab('database')">Database Design</button>
+            <button class="tab-btn" onclick="switchTab('policies')">Compliance Policies</button>
+            <button class="tab-btn" onclick="switchTab('analytics')">Data Analytics</button>
+            <button class="tab-btn" onclick="switchTab('literacy')">Health Literacy</button>
+        </div>
+        
+        <!-- Content -->
+        <div class="content">
+            
+            <!-- TAB 1: Database -->
+            <div id="database" class="tab-content active">
+                <div class="project-header">
+                    <h2>Healthcare Database Design & Implementation</h2>
+                    <div class="project-meta">HIMT 2870 PPE HIM Applications | Autumn 2025</div>
+                </div>
+                
+                <div class="project-details">
+                    <div class="detail-item">
+                        <div class="detail-label">Project Type</div>
+                        <div class="detail-value">Database Design & Development</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Tools</div>
+                        <div class="detail-value">Microsoft Access, SQL</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Scope</div>
+                        <div class="detail-value">Inpatient Clinical Workflow</div>
+                    </div>
+                </div>
+                
+                <div class="section-box">
+                    <h3>What I Built</h3>
+                    <p>
+                        Designed and implemented a comprehensive healthcare database system in Microsoft Access to support inpatient clinical workflow and documentation. The database includes patient information, encounter data, diagnoses, procedures, consultations, and clinical outcomes tracking with HIPAA-compliant access controls and data integrity features. I then delivered a presentation showcasing the database's key features and operational capabilities.
+                    </p>
+                </div>
+                
+                <div class="section-box">
+                    <h3>Technical Competencies</h3>
+                    <ul>
+                        <li><strong>Database Design:</strong> Normalized relational structure, primary/foreign keys, multi-table relationships</li>
+                        <li><strong>Data Management:</strong> Structured data entry, lookup tables, calculated fields, data validation</li>
+                        <li><strong>Workflow Support:</strong> Centralized switchboard for efficient navigation, standardized forms</li>
+                        <li><strong>Reporting:</strong> Average Length of Stay reports, patient code summaries </li>
+                    </ul>
+                </div>
+                
+                <div class="why-matters">
+                    <h3>Why This Matters</h3>
+                    <p>
+                        This project shows I can <strong>think systematically about complex problems.</strong> Building a functional database requires understanding how data flows, what relationships matter, and how to organize information so others can use it reliably. In HIM, this skill is essential: we use systems that protect patient data, ensure coding accuracy, and support clinical decision-making.
+                    </p>
+                    <p>
+                        It also demonstrates I can <strong>design for real-world use.</strong> A good database isn't just technically sound, it's usable. I designed forms, navigation, and reports with the end user in mind, not just the data structure.
+                    </p>
+                </div>
+                
+                <h3 style="color: #1a5f7a; margin: 30px 0 20px 0;">Project Presentation Slides</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                    <div style="background: #fff8f6ff; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+                        <img src="https://raw.githubusercontent.com/suzannaly/Portfolio/main/images/Slide1.JPG" alt="Database Overview Slide" style="width: 100%; height: auto; display: block;">
+                        <div style="padding: 15px;">
+                            <h4 style="color: #1a5f7a; margin-bottom: 8px;">Slide 1: Overview & Roadmap</h4>
+                            <p style="color: #777; font-size: 0.9em;">Project scope, design roadmap, field design, data entry demonstration</p>
+                        </div>
+                    </div>
+                    <div style="background: #fff8f6ff; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+                        <img src="https://raw.githubusercontent.com/suzannaly/Portfolio/main/images/Slide2.JPG" alt="Navigation Workflow Slide" style="width: 100%; height: auto; display: block;">
+                        <div style="padding: 15px;">
+                            <h4 style="color: #1a5f7a; margin-bottom: 8px;">Slide 2: Navigation & Workflow</h4>
+                            <p style="color: #777; font-size: 0.9em;">Centralized switchboard design, efficient data entry workflow</p>
+                        </div>
+                    </div>
+                    <div style="background: #fff8f6ff; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+                        <img src="https://raw.githubusercontent.com/suzannaly/Portfolio/main/images/Slide3.JPG" alt="Layout & Functionality Slide" style="width: 100%; height: auto; display: block;">
+                        <div style="padding: 15px;">
+                            <h4 style="color: #1a5f7a; margin-bottom: 8px;">Slide 3: Layout & Functionality</h4>
+                            <p style="color: #777; font-size: 0.9em;">Clinical workflow alignment, standardized data entry tools</p>
+                        </div>
+                    </div>
+                    <div style="background: #fff8f6ff; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+                        <img src="https://raw.githubusercontent.com/suzannaly/Portfolio/main/images/Slide4.JPG" alt="Database Structure Slide" style="width: 100%; height: auto; display: block;">
+                        <div style="padding: 15px;">
+                            <h4 style="color: #1a5f7a; margin-bottom: 8px;">Slide 4: Relational Structure</h4>
+                            <p style="color: #777; font-size: 0.9em;">UHDD-compliant table setup, multi-table relationships</p>
+                        </div>
+                    </div>
+                    <div style="background: #fff8f6ff; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+                        <img src="https://raw.githubusercontent.com/suzannaly/Portfolio/main/images/Slide5.JPG" alt="Data & Automation Slide" style="width: 100%; height: auto; display: block;">
+                        <div style="padding: 15px;">
+                            <h4 style="color: #1a5f7a; margin-bottom: 8px;">Slide 5: Structured Data & Automation</h4>
+                            <p style="color: #777; font-size: 0.9em;">Input masks, combo boxes, lookup tables, Length of Stay automation</p>
+                        </div>
+                    </div>
+                    <div style="background: #fff8f6ff; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+                        <img src="https://raw.githubusercontent.com/suzannaly/Portfolio/main/images/Slide6.JPG" alt="Meaningful Reporting Slide" style="width: 100%; height: auto; display: block;">
+                        <div style="padding: 15px;">
+                            <h4 style="color: #1a5f7a; margin-bottom: 8px;">Slide 6: Meaningful Reporting</h4>
+                            <p style="color: #777; font-size: 0.9em;">Average Length of Stay reports, code summaries, quality assurance audits</p>
+                        </div>
+                    </div>
+                    <div style="background: #fff8f6ff; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+                        <img src="https://raw.githubusercontent.com/suzannaly/Portfolio/main/images/Slide7.JPG" alt="Recommendations Slide" style="width: 100%; height: auto; display: block;">
+                        <div style="padding: 15px;">
+                            <h4 style="color: #1a5f7a; margin-bottom: 8px;">Slide 7: Recommendations</h4>
+                            <p style="color: #777; font-size: 0.9em;">Recommendations for enhancement</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- TAB 2: Policies -->
+            <div id="policies" class="tab-content">
+                <div class="project-header">
+                    <h2>Health Information Policies & Compliance</h2>
+                    <div class="project-meta">HIMT-1133: Legal Aspects of Health Information | Autumn 2024</div>
+                </div>
+                
+                <div class="project-details">
+                    <div class="detail-item">
+                        <div class="detail-label">Project Type</div>
+                        <div class="detail-value">Policy Documentation & Legal Analysis</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Policies</div>
+                        <div class="detail-value">2 Comprehensive Policies</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Focus</div>
+                        <div class="detail-value">HIPAA & 42 CFR Part 2 Compliance</div>
+                    </div>
+                </div>
+                
+                <!-- POLICY 1 DOCUMENT -->
+                <div style="background: white; border: 1px solid #ddd; border-radius: 8px; padding: 50px 40px; margin: 40px 0; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); font-family: 'Calibri', 'Times New Roman', serif; line-height: 1.8; color: #333; max-width: 100%;">
+                    <div style="text-align: center; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 2px solid #1a5f7a;">
+                        <h2 style="color: #1a5f7a; font-size: 1.4em; margin: 0 0 15px 0;">Exclusions from Patient Authorization for the Release of Information</h2>
+                        <p style="margin: 5px 0; color: #666; font-size: 0.95em;">Policy #1133-1</p>
+                        <p style="margin: 5px 0; color: #666; font-size: 0.95em;">Effective Date: 12/1/2024</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 25px;">
+                        <p style="margin: 8px 0;"><strong>Created by:</strong> Suzanna Bolich</p>
+                        <p style="margin: 8px 0;"><strong>Approved by:</strong> Sally Smith, HIM Director</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 30px; padding: 20px; background: #f9f9f9; border-left: 4px solid #2d8a9e; border-radius: 3px;">
+                        <h3 style="color: #1a5f7a; font-size: 1.1em; margin: 0 0 12px 0;">Citation of State and/or Federal Law</h3>
+                        <p style="margin: 5px 0; font-size: 0.9em;">The Health Insurance Portability and Accountability Act of 1996. Pub. L. 110. Stat. 1936.</p>
+                        <p style="margin: 5px 0; font-size: 0.9em;">United States, Office of the Assistant Secretary for Planning and Evaluation, HHS. "Standards for Privacy of Individually Identifiable Health Information." 65 Fed. Reg. 82802 (December 28, 2000)</p>
+                        <p style="margin: 5px 0; font-size: 0.9em;">Ohio State Legislature. House Bill 281 "Failure to report a crime or knowledge of a death or burn injury." ORC §2921.22 (April 6, 2023)</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 25px;">
+                        <h3 style="color: #1a5f7a; font-size: 1.1em; margin: 0 0 12px 0;">PURPOSE</h3>
+                        <p style="margin: 0; text-align: justify;">Generally, disclosure of Protected Healthcare Information requires written consent from the patient, in accordance with the HIPAA Privacy Rule. However, there are specific situations where patient consent is not necessary. These exceptions are enumerated in 45 CFR §164.512. This policy will only address specific types of exceptions where we believe, in good faith, that it is necessary to prevent or lessen a serious and imminent threat to the health or safety of a person or the public.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 25px;">
+                        <h3 style="color: #1a5f7a; font-size: 1.1em; margin: 0 0 12px 0;">POLICY</h3>
+                        
+                        <h4 style="color: #1a5f7a; margin: 15px 0 10px 0; font-size: 1em;">Public Health</h4>
+                        <p style="margin: 0; text-align: justify;">PHI may be disclosed to public health authorities for the prevention of disease, injury, or disability. This includes disclosures to the FDA with respect to food, dietary supplements, or product defects.</p>
+                        
+                        <h4 style="color: #1a5f7a; margin: 15px 0 10px 0; font-size: 1em;">Victims of Crime</h4>
+                        <p style="margin: 8px 0; text-align: justify;">We are required by law to report any suspicions of child abuse or neglect, contact the Social Services Department immediately.</p>
+                        <p style="margin: 8px 0; text-align: justify;">If you reasonably believe an adult patient to be a victim of abuse, neglect, or domestic violence, and believe disclosure would prevent serious harm, you should inform your supervisor to determine the appropriate course of action. It is important to note that we are legally required to inform the victim of any report made unless doing so could result in possible harm. Furthermore, ORC § 2921.22 defines a legal obligation to notate any reasonable suspicion of domestic violence, and the basis for that suspicion, in the patient's records.</p>
+                        <p style="margin: 8px 0; text-align: justify;">If a law enforcement official requests information about an individual who is suspected to be a victim of a crime, we may disclose PHI only if the individual cannot consent due to emergency or incapacitation, provided that:</p>
+                        <ol style="margin: 8px 0 8px 25px;">
+                            <li>The information is not intended to be used against the victim.</li>
+                            <li>Immediate law enforcement activity depends upon the disclosure.</li>
+                            <li>We determine the disclosure is in the best interests of the individual.</li>
+                        </ol>
+                        
+                        <h4 style="color: #1a5f7a; margin: 15px 0 10px 0; font-size: 1em;">Other Rules Regarding Law Enforcement</h4>
+                        <p style="margin: 8px 0; text-align: justify;">We must disclose PHI if it is necessary for the identification or apprehension of an individual that has admitted to participation in a violent crime, or if the individual has escaped from lawful custody.</p>
+                        <p style="margin: 8px 0; text-align: justify;">We are legally required to report knowledge of a felony, and certain types of wounds or other physical injuries. Specifically, we must report to law enforcement any gunshot or stab wound, serious burns, any serious physical harm to persons resulting from violence, any harm caused by "fireworks," or harm caused by an explosive or incendiary device.</p>
+                        <p style="margin: 8px 0; text-align: justify;">We must release PHI in compliance with a court order or court-ordered warrant. We may disclose PHI in limited forms if presented with a subpoena or otherwise requested by law enforcement if:</p>
+                        <ol style="margin: 8px 0 8px 25px;">
+                            <li>The information sought is material for an investigation.</li>
+                            <li>The request is specific and limited.</li>
+                            <li>De-identified information cannot be used.</li>
+                        </ol>
+                    </div>
+                    
+                    <div style="padding: 15px; background: #fff8f6ff; border-left: 4px solid #2d8a9e; border-radius: 3px;">
+                        <p style="margin: 0; font-size: 0.95em;"><strong>These are complex issues and should be handled with unmitigated care and sensitivity. If you are unsure about the appropriateness of disclosure in any situation, contact the Compliance Office or HIM Department for assistance. Any conduct found to be in violation of any law, statute, or regulation may result in disciplinary action.</strong></p>
+                    </div>
+                </div>
+                
+                <!-- POLICY 2 DOCUMENT -->
+                <div style="background: white; border: 1px solid #ddd; border-radius: 8px; padding: 50px 40px; margin: 40px 0; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); font-family: 'Calibri', 'Times New Roman', serif; line-height: 1.8; color: #333; max-width: 100%;">
+                    <div style="text-align: center; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 2px solid #1a5f7a;">
+                        <h2 style="color: #1a5f7a; font-size: 1.4em; margin: 0 0 15px 0;">Release of Information from an Alcohol and Drug Treatment Facility</h2>
+                        <p style="margin: 5px 0; color: #666; font-size: 0.95em;">Policy #1133-2</p>
+                        <p style="margin: 5px 0; color: #666; font-size: 0.95em;">Effective Date: 12/1/2024</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 25px;">
+                        <p style="margin: 8px 0;"><strong>Created by:</strong> Suzanna Bolich</p>
+                        <p style="margin: 8px 0;"><strong>Approved by:</strong> Sally Smith, HIM Director</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 30px; padding: 20px; background: #f9f9f9; border-left: 4px solid #2d8a9e; border-radius: 3px;">
+                        <h3 style="color: #1a5f7a; font-size: 1.1em; margin: 0 0 12px 0;">Citation of State and/or Federal Law</h3>
+                        <p style="margin: 5px 0; font-size: 0.9em;">The Health Insurance Portability and Accountability Act of 1996. Pub. L. 110. Stat. 1936.</p>
+                        <p style="margin: 5px 0; font-size: 0.9em;">United States, Substance Abuse and Mental Health Services Administration, HHS. "Confidentiality of Substance Use Disorder Patient Records." 82 Fed. Reg. 6052 (January 18, 2017)</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 25px;">
+                        <h3 style="color: #1a5f7a; font-size: 1.1em; margin: 0 0 12px 0;">PURPOSE</h3>
+                        <p style="margin: 0; text-align: justify;">The privacy of our clients is of the utmost importance to our organization. In addition to our own principles, there are legal conditions we must fulfill. The two primary laws governing privacy and confidentiality restrictions with respect to patient information are HIPAA and 42 CFR Part 2, "Confidentiality of Substance Use Disorder Patient Records." The purpose of this policy is to ensure we maintain the highest standards of confidentiality and maintain strict adherence to legal requirements regarding the disclosure of Protected Health Information. Carefully review this document and contact compliance or HIM Department staff if you have any questions. Any conduct found to be in violation of any law, statute, or regulation may result in disciplinary action.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 25px;">
+                        <h3 style="color: #1a5f7a; font-size: 1.1em; margin: 0 0 12px 0;">POLICY</h3>
+                        <p style="margin: 12px 0; text-align: justify;">Please note, we are required by law to provide our clients with written notice of our privacy policies and procedures. When disclosure of Protected Healthcare Information is necessary, we must first obtain written consent from the patient, in accordance with the HIPAA Privacy Rule. We should assist clients when consent is necessary, to ensure the completeness of the authorization provided. To conform to legal guidelines the consent to release PHI must include the following elements:</p>
+                        
+                        <ul style="margin: 12px 0 12px 25px;">
+                            <li>Name of the patient.</li>
+                            <li>Purpose of the disclosure.</li>
+                            <li>Name of the organization or person making the disclosure.</li>
+                            <li>The name of the recipient (individual or organization) of the disclosure.</li>
+                            <li>A specific description of the information to be disclosed (how much and what kind).</li>
+                            <li>Signature of the patient, a parent, or guardian.</li>
+                            <li>The date the patient signed the consent.</li>
+                            <li>The date, the event, or condition upon which consent will expire if consent has not been previously revoked.</li>
+                            <li>A statement regarding the potential for the records used or disclosed pursuant to the consent to be subject to redisclosure by the recipient and no longer protected.</li>
+                            <li>A statement explaining the consequences to the patient of a refusal to sign the consent.</li>
+                            <li>The following statement: "This consent is subject to revocation at any time except to the extent that the program has already acted on it."</li>
+                        </ul>
+                        
+                        <p style="margin: 12px 0; text-align: justify;">Pursuant to 42 CFR Part 2, there are limited exceptions to these authorization requirements, including the following:</p>
+                        <ul style="margin: 12px 0 12px 25px;">
+                            <li>Medical Emergencies</li>
+                            <li>Scientific Research</li>
+                            <li>Management audits, financial audits, and program evaluations</li>
+                            <li>Disclosures for public health</li>
+                        </ul>
+                        
+                        <p style="margin: 12px 0; text-align: justify;">If you believe consent may not be necessary in a situation, please inform your supervisor to determine the appropriate course of action.</p>
+                    </div>
+                </div>
+                
+                <div class="why-matters">
+                    <h3>Why This Matters</h3>
+                    <p>
+                        This work shows I can <strong>navigate complex legal and regulatory environments.</strong> HIPAA and 42 CFR Part 2 aren't simple, but I can explain them clearly and build practical organizational procedures around them.
+                    </p>
+                    <p>
+                        It demonstrates <strong>commitment to accuracy in high-stakes situations.</strong> Release of Information decisions directly impact patient privacy and legal compliance. I don't take shortcuts or make assumptions, I verify against actual regulatory language and provide clear decision-making frameworks.
+                    </p>
+                    <p>
+                        Organizations need HIM professionals who can read regulations, understand their implications, and translate them into actionable policies that protect both patients and the organization from legal liability.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- TAB 3: Analytics -->
+            <div id="analytics" class="tab-content">
+                <div class="project-header">
+                    <h2>Healthcare Data Analytics & Visualization</h2>
+                    <div class="project-meta">HIMT-2257: Health Statistics | Spring 2026</div>
+                </div>
+                
+                <div class="project-details">
+                    <div class="detail-item">
+                        <div class="detail-label">Project Type</div>
+                        <div class="detail-value">Data Analysis & Visualization</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Data Sources</div>
+                        <div class="detail-value">Medicare, Medicaid, CMS Public Data</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Tools</div>
+                        <div class="detail-value">Excel, Data Visualization</div>
+                    </div>
+                </div>
+                
+                <div class="section-box">
+                    <h3>Project Overview</h3>
+                    <p>
+                        Analyzed large healthcare datasets to identify trends, patterns, and insights for healthcare stakeholders. Created professional infographics to communicate complex data in accessible, decision-ready formats.
+                    </p>
+                </div>
+                
+                <div class="section-box">
+                    <h3>Analysis 1: Medicaid Health Trends in Ohio</h3>
+                    <p>
+                        Comprehensive analysis of insurance status, access to care, and unmet healthcare needs among Ohio adults. Data organized by county type, insurance coverage, race/ethnicity, and health conditions to guide community health interventions.
+                    </p>
+                </div>
+                
+                <div class="section-box">
+                    <h3>Analysis 2: Medicare HCPCS Coding Trends in Ohio</h3>
+                    <p>
+                        Analyzed coding patterns for healthcare procedures and services in Ohio Medicare data. Identified top rendered services, most expensive services, and reimbursement trends to support revenue cycle and coding operations.
+                    </p>
+                </div>
+                
+                <div class="why-matters">
+                    <h3>Why This Matters</h3>
+                    <p>
+                        This work shows I can <strong>take raw data and make it meaningful for decision-makers.</strong> It's not enough to run calculations, you need to understand what the numbers mean in a healthcare context and present them so others can act on them.
+                    </p>
+                    <p>
+                        It demonstrates <strong>healthcare domain knowledge combined with analytical skill.</strong> I don't just make pretty charts, I analyze coding patterns, insurance coverage, and population health outcomes because I understand why those metrics matter to organizations.
+                    </p>
+                    <p>
+                        HIM professionals need to be comfortable with data and confident explaining what it reveals about operations, costs, and quality.
+                    </p>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin: 30px 0;">
+                    <div style="text-align: center;">
+                        <img src="https://raw.githubusercontent.com/suzannaly/Portfolio/main/images/medicaid.png" alt="Medicaid Health Trends in Ohio" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+                        <h4 style="color: #1a5f7a; margin: 12px 0 8px 0;">Analysis 1: Medicaid Health Trends</h4>
+                        <p style="color: #777; font-size: 0.9em;">Insurance status, access to care, and unmet healthcare needs by county and demographics</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <img src="https://raw.githubusercontent.com/suzannaly/Portfolio/main/images/medicare.png" alt="Medicare HCPCS Coding Trends in Ohio" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+                        <h4 style="color: #1a5f7a; margin: 12px 0 8px 0;">Analysis 2: Medicare HCPCS Trends</h4>
+                        <p style="color: #777; font-size: 0.9em;">Coding patterns, rendered services, costs, and reimbursement trends</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- TAB 4: Health Literacy -->
+            <div id="literacy" class="tab-content">
+                <div class="project-header">
+                    <h2>Health Literacy & Patient Communication</h2>
+                    <div class="project-meta">OHIMA VIP Module: Health Literacy Presentations (10 hours) | Autumn 2025</div>
+                </div>
+                
+                <div class="project-details">
+                    <div class="detail-item">
+                        <div class="detail-label">Project Type</div>
+                        <div class="detail-value">Patient Education Design</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Focus</div>
+                        <div class="detail-value">Plain Language Communication</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Example</div>
+                        <div class="detail-value">Colon Cancer Screening Education</div>
+                    </div>
+                </div>
+                
+                <div class="section-box">
+                    <h3>What I Created</h3>
+                    <p>
+                        Patient education materials that translate clinical information about colorectal cancer screening into accessible, patient-centered communication. The materials explain the "why" behind screening recommendations in language patients understand, without oversimplifying medical accuracy.
+                    </p>
+                </div>
+                
+                <div class="section-box">
+                    <h3>Competencies Demonstrated</h3>
+                    <ul>
+                        <li><strong>Health Literacy Principles:</strong> Plain language, visual organization, audience-appropriate complexity</li>
+                        <li><strong>Clinical Accuracy:</strong> Translating clinical information without losing essential details</li>
+                        <li><strong>Patient Engagement:</strong> Motivating behavior change through clear, respectful communication</li>
+                        <li><strong>Preventive Care Focus:</strong> Understanding public health messaging and screening recommendations</li>
+                        <li><strong>Professional Healthcare Communication:</strong> Compliance with healthcare communication standards</li>
+                    </ul>
+                </div>
+                
+                <div class="why-matters">
+                    <h3>Why This Matters</h3>
+                    <p>
+                        This shows I understand that <strong>HIM isn't just about managing data, it's about communicating effectively.</strong> Healthcare information only matters if patients understand it and can act on it.
+                    </p>
+                    <p>
+                        I can <strong>simplify complex medical concepts without losing accuracy.</strong> This is harder than it sounds, and it's essential in HIM when we're documenting care, explaining policies, or supporting patient communication.
+                    </p>
+                    <p>
+                        It reflects commitment to <strong>patient-centered care</strong>, which is the foundation of quality healthcare.
+                    </p>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin: 30px 0;">
+                    <div style="text-align: center;">
+                        <img src="https://raw.githubusercontent.com/suzannaly/Portfolio/main/images/Pamphlet1.png" alt="Colon Cancer Screening Pamphlet - Page 1" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+                        <p style="color: #777; font-size: 0.9em; margin-top: 12px;">Pamphlet Page 1</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <img src="https://raw.githubusercontent.com/suzannaly/Portfolio/main/images/Pamphlet2.png" alt="Colon Cancer Screening Pamphlet - Page 2" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+                        <p style="color: #777; font-size: 0.9em; margin-top: 12px;">Pamphlet Page 2</p>
+                    </div>
+                </div>
+            </div>
+            
+        <!-- Footer -->
+        <footer>
+            <p><strong>Who I Am</strong></p>
+            <p>Suzanna Bolich | Health Information Management Professional</p>
+            <p>Columbus State Community College | Expected Graduation: May 2026</p>
+            <p style="font-size: 0.85em; margin-top: 15px; opacity: 0.9;">
+                RHIT Certification Eligible | Pursuing Excellence in Healthcare Informatics
+            </p>
+        </footer>
+    </div>
+    
+    <script>
+        function switchTab(tabName) {
+            // Hide all tabs
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            
+            // Remove active from all buttons
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // Show selected tab
+            document.getElementById(tabName).classList.add('active');
+            
+            // Highlight clicked button
+            event.target.classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
