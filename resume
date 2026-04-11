@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume & Cover Letter - Suzanna Bolich E-Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #fff8f6ff;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1a5f7a 0%, #2d8a9e 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+            border-radius: 0;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 50px;
+        }
+        
+        .page-title {
+            color: #1a5f7a;
+            font-size: 2em;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #2d8a9e;
+        }
+        
+        .section-heading {
+            color: #1a5f7a;
+            font-size: 1.5em;
+            margin: 30px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #2d8a9e;
+        }
+        
+        .section-heading:first-child {
+            margin-top: 0;
+        }
+        
+        .document-viewer {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        
+        .document-viewer iframe {
+            width: 100%;
+            height: 700px;
+            border: none;
+        }
+        
+        .download-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: #2d8a9e;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95em;
+        }
+        
+        .download-link:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            background: #1a5f7a;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            border-top: 3px solid #2d8a9e;
+            border-radius: 0;
+        }
+        
+        footer p {
+            margin-bottom: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            
+            header h1 {
+                font-size: 1.8em;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .page-title {
+                font-size: 1.5em;
+            }
+            
+            .document-viewer iframe {
+                height: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+<div style="background: #1a5f7a; padding: 15px; text-align: center; width: 100vw; margin-left: calc(-50vw + 50%); box-sizing: border-box; display: flex; justify-content: center; flex-wrap: wrap;">
+<button onclick="window.location='https://sites.google.com/view/suzanna-bolich-e-portfolio/welcome'" onmouseover="this.style.backgroundImage='url(https://raw.githubusercontent.com/suzannaly/Portfolio/main/images/home.png)'; this.style.backgroundSize='cover'; this.style.color='transparent';" onmouseout="this.style.backgroundImage='none'; this.style.color='white';" style="background: #2d8a9e; color: white; border: none; padding: 0; width: 155px; height: 85px; margin: 5px; cursor: pointer; font-weight: 500; border-radius: 5px; display: flex; align-items: center; justify-content: center;">Welcome</button>
+
+<button onclick="window.location='https://sites.google.com/view/suzanna-bolich-e-portfolio/academic-materials'" onmouseover="this.style.backgroundImage='url(https://raw.githubusercontent.com/suzannaly/Portfolio/main/images/College.png)'; this.style.backgroundSize='cover'; this.style.color='transparent';" onmouseout="this.style.backgroundImage='none'; this.style.color='white';" style="background: #2d8a9e; color: white; border: none; padding: 0; width: 155px; height: 85px; margin: 5px; cursor: pointer; font-weight: 500; border-radius: 5px; display: flex; align-items: center; justify-content: center;"> Academic Materials </button>
+
+<button onclick="window.location='https://sites.google.com/view/suzanna-bolich-e-portfolio/resume'" onmouseover="this.style.backgroundImage='url(https://raw.githubusercontent.com/suzannaly/Portfolio/main/images/resume.png)'; this.style.backgroundSize='cover'; this.style.color='transparent';" onmouseout="this.style.backgroundImage='none'; this.style.color='white';" style="background: #2d8a9e; color: white; border: none; padding: 0; width: 155px; height: 85px; margin: 5px; cursor: pointer; font-weight: 500; border-radius: 5px; display: flex; align-items: center; justify-content: center;"> Resume </button>
+
+<button onclick="window.location='https://sites.google.com/view/suzanna-bolich-e-portfolio/ppe-experiences'" onmouseover="this.style.backgroundImage='url(https://raw.githubusercontent.com/suzannaly/Portfolio/main/images/office.png)'; this.style.backgroundSize='cover'; this.style.color='transparent';" onmouseout="this.style.backgroundImage='none'; this.style.color='white';" style="background: #2d8a9e; color: white; border: none; padding: 0; width: 155px; height: 85px; margin: 5px; cursor: pointer; font-weight: 500; border-radius: 5px; display: flex; align-items: center; justify-content: center;"> PPE Experiences </button>
+
+<button onclick="window.location='https://sites.google.com/view/suzanna-bolich-e-portfolio/volunteer-work'" onmouseover="this.style.backgroundImage='url(https://raw.githubusercontent.com/suzannaly/Portfolio/main/images/United.png)'; this.style.backgroundSize='cover'; this.style.color='transparent';" onmouseout="this.style.backgroundImage='none'; this.style.color='white';" style="background: #2d8a9e; color: white; border: none; padding: 0; width: 155px; height: 85px; margin: 5px; cursor: pointer; font-weight: 500; border-radius: 5px; display: flex; align-items: center; justify-content: center;"> Volunteer Work </button>
+
+<button onclick="window.location='https://sites.google.com/view/suzanna-bolich-e-portfolio/who-i-am'" onmouseover="this.style.backgroundImage='url(https://raw.githubusercontent.com/suzannaly/Portfolio/main/images/who.png)'; this.style.backgroundSize='cover'; this.style.color='transparent';" onmouseout="this.style.backgroundImage='none'; this.style.color='white';" style="background: #2d8a9e; color: white; border: none; padding: 0; width: 155px; height: 85px; margin: 5px; cursor: pointer; font-weight: 500; border-radius: 5px; display: flex; align-items: center; justify-content: center;"> Who I Am </button>
+</div> 
+
+        <header>
+            <h1>Resume & Cover Letter</h1>
+            <p>Suzanna Bolich | Health Information Management Professional</p>
+        </header>
+        
+        <div class="content">
+            <h2 class="page-title">Resume & Cover Letter</h2>
+            
+            <!-- Resume Section -->
+            <div class="section">
+                <h3 class="section-heading">Resume</h3>
+                <div class="document-viewer">
+                    <iframe src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/suzannaly/Portfolio/main/images/Bolich_Suzanna_Resume.pdf&embedded=true" title="Resume PDF"></iframe>
+                </div>
+                <a href="https://raw.githubusercontent.com/suzannaly/Portfolio/main/images/Bolich_Suzanna_Resume.pdf" download class="download-link">↓ Download Resume</a>
+            </div>
+            
+            <!-- Cover Letter Section -->
+            <div class="section">
+                <h3 class="section-heading">Cover Letter</h3>
+                <div class="document-viewer">
+                    <iframe src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/suzannaly/Portfolio/main/images/Bolich_Suzanna_CoverLetter.pdf&embedded=true" title="Cover Letter PDF"></iframe>
+                </div>
+                <a href="https://raw.githubusercontent.com/suzannaly/Portfolio/main/images/Bolich_Suzanna_CoverLetter.pdf" download class="download-link">↓ Download Cover Letter</a>
+            </div>
+        </div>
+        
+        <footer>
+            <p><strong>Resume & Cover Letter</strong></p>
+            <p>Suzanna Bolich | Health Information Management Professional</p>
+            <p>Columbus State Community College | Expected Graduation: May 2026</p>
+            <p style="font-size: 0.85em; margin-top: 15px; opacity: 0.9;">
+                RHIT Certification Eligible | Pursuing Excellence in Healthcare Informatics
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
