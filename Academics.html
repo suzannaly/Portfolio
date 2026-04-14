@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academic Materials - Suzanna Bolich</title>
     <style>
+.overlay { display: none !important; }
+    div:has(.overlay):hover .overlay { display: flex !important; }
         * {
             margin: 0;
             padding: 0;
@@ -71,8 +73,8 @@
         
         h3 {
             color: #1a5f7a;
-            margin: 30px 0 20px 0;
-            font-size: 1.2em;
+            margin: 45px 0 20px 0;
+            font-size: 2.5em;
         }
         
         .semester-toggle {
@@ -212,17 +214,33 @@
         
         <div class="content">
             <div class="section-intro">
-                <h2>Educational Background</h2>
+                                <img src="https://raw.githubusercontent.com/suzannaly/portfolio/main/images/Cougar.png" alt="Cougar" style="width: 200px; height: auto; border: 4px solid #1a5f7a;
+    border-radius: 8px;
+    padding: 10px; background: #F2AA84;
+">
+<h2>Educational Background</h2>
                 <p>
                     I am pursuing an Associate of Applied Science in Health Information Management Technology (HIMT AAS) 
                     at Columbus State Community College with an expected graduation date of May 2026. My coursework focuses on 
                     healthcare data management, medical coding, compliance, quality improvement, and health information systems. 
                     Below is a comprehensive summary of courses completed and currently in progress, organized by semester.
                 </p>
+          
             </div>
-            
-            <h3>Coursework by Semester</h3>
-            
+<div style="display: flex; gap: 30px; align-items: flex-start; margin-bottom: 30px;">
+    <div style="position: relative; width: 300px; flex-shrink: 0;">
+        <a href="https://explore.cscc.edu/programs/HIMT.AAS/health-information-management-technology-aas" target="_blank" style="text-decoration: none; display: block;">
+            <img src="https://raw.githubusercontent.com/suzannaly/portfolio/main/images/cscc.jpg" alt="CSCC Courses" style="width: 300px; height: auto; border: 4px solid #1a5f7a; border-radius: 8px; padding: 10px; background: #F2AA84; display: block;">
+            <div style="position: absolute; top: 10px; left: 10px; width: calc(100% - 20px); height: calc(100% - 20px); background: rgba(0,0,0,0.6); border-radius: 8px; display: none; align-items: center; justify-content: center; cursor: pointer;" class="overlay">
+                <span style="color: white; font-size: 1.1em; font-weight: bold; text-align: center;">Click to Explore CSCC HIMT Program</span>
+            </div>
+        </a>
+    </div>
+    <div>
+        <h3 style="margin-top: 45;">Coursework by Semester</h3>
+    </div>
+</div>
+ <div>
             <div style="margin-bottom: 20px;">
                 <button onclick="toggleSemester(this)" class="semester-toggle"><span class="arrow">►</span> Autumn 2024 <span class="gpa-badge">&nbsp;Dean's List</span></button>
                 <div class="semester-content" style="display: none;">
@@ -293,7 +311,7 @@
                 </ul>
             </div>
         </div>
-        
+         </div>
         <footer>
             <p><strong>Academic Materials</strong></p>
             <p>Suzanna Bolich | Health Information Management Professional</p>
