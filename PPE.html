@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PPE Experiences & HIM Related Work - Suzanna Bolich E-Portfolio</title>
     <style>
+.overlay { display: none !important; }
+div:has(.overlay):hover .overlay { display: flex !important; }
         * {
             margin: 0;
             padding: 0;
@@ -149,7 +151,7 @@
         
         .him-work-section h2 {
             color: #1a5f7a;
-            font-size: 1.5em;
+            font-size: 1.4em;
             margin-bottom: 20px;
             padding-bottom: 10px;
             border-bottom: 2px solid #2d8a9e;
@@ -366,13 +368,20 @@
     </div>
         </header>
         
-        <div class="content">
-            <h2 class="page-title"><a href="https://ohima.mclms.net/en/package/list" target="_blank" style="display: inline-block; margin-top: 15px;">
-        <img src="https://raw.githubusercontent.com/suzannaly/portfolio/main/images/ohima.webp" alt="Link" style="width: 140px; height: 100px; border: 4px solid #F2AA84;
-    border-radius: 8px;
-    padding: 10px; background: #1a5f7a;
-">
-    </a>&nbsp;&nbsp;Professional Practice Experience (PPE)</h2>
+       <div class="content">
+    <div style="display: flex; gap: 30px; align-items: flex-start; margin-bottom: 30px;">
+        <div style="position: relative; width: 200px; flex-shrink: 0;">
+            <a href="https://ohima.mclms.net/en/package/list" target="_blank" style="text-decoration: none; display: block;">
+                <img src="https://raw.githubusercontent.com/suzannaly/portfolio/main/images/ohima.webp" alt="OHIMA VIP" style="width: 200px; height: 100px; border: 4px solid #1a5f7a; border-radius: 8px; padding: 10px; background: #F2AA84; display: block;">
+                <div style="position: absolute; top: 10px; left: 10px; width: calc(100% - 20px); height: calc(100% - 20px); background: rgba(0,0,0,0.6); border-radius: 8px; display: none; align-items: center; justify-content: center;" class="overlay">
+                    <span style="color: white; font-size: 0.9em; font-weight: bold; text-align: center;">Click to Explore OHIMA VIP Courses</span>
+                </div>
+            </a>
+        </div>
+        <div>
+            <h2 style="margin-top: 80; color: #1a5f7a;font-size: 2.4em">Professional Practice Experience (PPE)</h2>
+        </div>
+    </div>
             
             <div class="intro-box">
                 <p>
@@ -518,9 +527,9 @@
 
             </div>
 
-            <!-- HIM Related Work Section -->
+            <!-- HIM Work Section -->
             <div class="him-work-section">
-                <h2>HIM Related Work Experience</h2>
+                <h2>HIM Experience</h2>
                 <p>
                     <strong>Skills Developed:</strong>
                 </p>
