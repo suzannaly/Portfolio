@@ -349,6 +349,20 @@ justify-content:center;
                 grid-template-columns: 1fr;
             }
         }
+.image-container {
+    border: 2px solid #2d8a9e;
+    border-radius: 8px;
+    padding: 10px;
+    background: #F2AA84;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-container img {
+    width: 400px;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
     </style>
 </head>
 <body>
@@ -369,9 +383,18 @@ justify-content:center;
 
         <!-- Header -->
         <header>
+<div style="display: flex; align-items: center; gap: 20px;">
+        <div class="image-container">
+            <img src="https://raw.githubusercontent.com/suzannaly/Portfolio/main/images/who.png" alt="Projects">
+        </div>
+        <div>
+
             <h1>Who I Am</h1>
             <p>Suzanna Bolich | Health Information Management Professional</p>
-        </header>
+ </div>
+    </div>
+        
+</header>
         
         <!-- Credentials Bar -->
        <div class="credentials-bar">
